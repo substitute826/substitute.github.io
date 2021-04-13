@@ -1,0 +1,975 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 102%;
+	overflow-y: hidden;
+}
+
+#body {
+	width: 100%;
+	height: 100%;
+	background-color: #CCCCCC;
+}
+
+.friend {
+	width: 1000px;
+	height: 600px;
+	display: flex;
+	background-color: transparent;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -300px);
+}
+
+.mue {
+	width: 60px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	background-color: #f0f0f0;
+	display: flex;
+	flex-direction: column;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-right: 1px solid #DDDDDD;
+}
+
+.my_img {
+	padding: 15px 10px 5px;
+	width: 60px;
+	height: 60px;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+.my_img>img {
+	border-radius: 100%;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+#my_toast {
+	position: absolute;
+	border-radius: 5px;
+	overflow: hidden;
+	z-index: 11;
+}
+
+.toast-header>img {
+	width: 26px;
+	height: 26px;
+}
+
+#my_toast_body {
+	width: 280px;
+	height: 280px;
+	overflow: hidden;
+}
+
+#my_toast_body>div {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.my_toast_body_head {
+	width: 100%;
+	height: 110px;
+	display: flex;
+	flex-grow: 0;
+	flex-shrink: 0;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+.my_toast_body_head>div {
+	flex-shrink: 0;
+	flex-grow: 0;
+	width: 156px;
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0;
+}
+
+.my_toast_body_head>div>label {
+	display: inline-block;
+	font-size: 25px;
+	height: max-content;
+	font-weight: 500;
+	border-radius: 5px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	float: left;
+	margin: 0;
+}
+
+.my_toast_body_head>div>span {
+	display: inline-block;
+	font-size: 14px;
+	flex-grow: 1;
+}
+
+.my_toast_body_head>img {
+	width: 80px;
+	height: 80px;
+	border-radius: 5px;
+	margin: auto;
+}
+
+.my_toast_body_body {
+	margin: 20px 5px;
+	display: grid;
+	line-height: 30px;
+	grid-template-columns: 65px auto;
+	grid-template-rows: 30px 30px 30px;
+}
+
+.my_toast_body_body>label {
+	font-size: 14px;
+	text-align: justify;
+	display: inline-block;
+	margin-right: 5px;
+	line-height: 30px;
+	color: #a5a5a5;
+}
+
+.my_toast_body_body>label:after {
+	content: '';
+	display: inline-block;
+	width: 70px;
+}
+
+.my_toast_body_body>span {
+	display: inline-block;
+	margin: 0;
+	line-height: 30px;
+	margin-left: 10px;
+	font-size: 16px;
+	color: #353535;
+}
+
+.util {
+	width: 60px;
+	flex-grow: 1;
+}
+
+.util ul {
+	width: 100%;
+	padding: 5px 10px 0;
+}
+
+.util li {
+	width: 100%;
+	height: 50px;
+	margin-top: 5px;
+	list-style: none;
+}
+.more_ul{
+	width: 60px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	height: 0px;
+	border-top: 1px solid #DDDDDD;
+	overflow: hidden;
+	transition: 0.5s;
+}
+.more_ul ul{
+	width: 100%;
+	padding: 5px 10px 0;
+}
+.more_ul li {
+	width: 100%;
+	height: 50px;
+	margin-top: 5px;
+	list-style: none;
+}
+#service i{
+	background-image: url(../picture/friend/service.png);
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+#service i:hover {
+	background-image: url(../picture/friend/service_2.png);
+}
+.mescon i {
+	background-image: url(../picture/friend/mescon.png);
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.mescon i:hover {
+	background-image: url(../picture/friend/mescon_2.png);
+}
+
+.mescon i[disabled] {
+	background-image: url(../picture/friend/mescon_3.png);
+	cursor: default;
+}
+
+.mescon i[disabled]:hover {
+	background-image: url(../picture/friend/mescon_3.png);
+}
+
+.friendcon i {
+	background-image: url(../picture/friend/friend.png);
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.friendcon i:hover {
+	background-image: url(../picture/friend/friend_2.png);
+}
+
+.friendcon i[disabled] {
+	background-image: url(../picture/friend/friend_3.png);
+	cursor: default;
+}
+
+.friendcon i[disabled]:hover {
+	background-image: url(../picture/friend/friend_3.png);
+}
+
+.more {
+	width: 60px;
+	height: 60px;
+	padding: 15px;
+}
+
+.more i {
+	background-image: url(../picture/friend/mue.png);
+	display: inline-block;
+	width: 30px;
+	height: 25px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	cursor: pointer;
+	margin-top: 5px;
+	transition: all 0.5s;
+}
+
+.more i:hover {
+	background-image: url(../picture/friend/mue_2.png);
+}
+
+.second {
+	width: 250px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	background-color: #ededed;
+	display: flex;
+	flex-direction: column;
+}
+
+.serch {
+	padding: 15px 15px 5px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	height: 60px;
+	background-color: #ededed;
+	display: flex;
+}
+
+#f_search {
+	flex-grow: 1;
+	height: 30px;
+	margin: auto 0;
+	border-radius: 15px;
+	outline: none;
+	border: 1px;
+	line-height: 30px;
+	margin-right: 10px;
+	background-color: #FFFFFF;
+	padding-left: 12px;
+	font-size: 14px;
+}
+
+.serch i {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background-image: url(../picture/friend/add.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 15px 15px;
+	margin: auto 0;
+	background-color: #FFFFFF;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.mes_touch {
+	width: 250px;
+	height: 540px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	background-color: #ededed;
+	transition: 0.5s;
+	overflow: hidden;
+}
+
+.mes_touch ul {
+	width: 100%;
+	height: 540px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.mes_touch ul::-webkit-scrollbar {
+	/*滚动条整体样式*/
+	width: 7px;
+	/*高宽分别对应横竖滚动条的尺寸*/
+}
+
+.mes_touch ul::-webkit-scrollbar-thumb {
+	/*滚动条里面小方块*/
+	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.mes_touch ul::-webkit-scrollbar-track {
+	/*滚动条里面轨道*/
+	background: transparent;
+}
+
+.mes_touch li {
+	margin: 0px 11px 3px 15px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	height: 60px;
+	width: 220px;
+	border-radius: 7px;
+	list-style: none;
+	background-color: #FFFFFF;
+	display: flex;
+	padding: 10px 5px;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, .14);
+	cursor: pointer;
+}
+
+.mes_touch li:hover {
+	background-color: #f4f4f4;
+}
+
+.mes_touch img {
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	margin: auto 0;
+}
+
+.mes_touch div {
+	display: flex;
+	flex-direction: column;
+	padding: 0 10px;
+	padding-right: 5px;
+}
+
+.mes_touch_name {
+	font-size: 15px;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0;
+	font-weight: 500;
+	width: 160px;
+	color: #000000;
+}
+
+.mes_touch_mes {
+	display: inline-block;
+	white-space: nowrap;
+	width: 160px;
+	overflow: hidden;
+	font-size: 13px;
+	text-overflow: ellipsis;
+	color: #a5a5a5;
+}
+
+.friend_list {
+	flex-grow: 0;
+	flex-shrink: 0;
+	height: 0;
+	background-color: #ededed;
+	transition: 0.5s;
+	width: 250px;
+	overflow: hidden;
+}
+
+.friend_list ul {
+	width: 100%;
+	height: 540px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.friend_list ul::-webkit-scrollbar {
+	/*滚动条整体样式*/
+	width: 4px;
+	/*高宽分别对应横竖滚动条的尺寸*/
+}
+
+.friend_list ul::-webkit-scrollbar-thumb {
+	/*滚动条里面小方块*/
+	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.friend_list ul::-webkit-scrollbar-track {
+	/*滚动条里面轨道*/
+	background: transparent;
+}
+
+.friend_list li {
+	padding: 12px 16px 12px 21px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	height: 70px;
+	width: 250px;
+	margin: 0 auto;
+	list-style: none;
+	display: flex;
+	cursor: pointer;
+	position: relative;
+}
+
+.friend_list li:hover {
+	background-color: #e5e5e5;
+}
+
+.friend_list img{
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	margin: auto 0;
+}
+.friend_list span{
+	font-weight: 500;
+	font-size: 18px;
+	display: inline-block;
+	flex-grow: 1;
+	line-height: 46px;
+	padding-left: 8px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.search_val{
+	flex-grow: 0;
+	flex-shrink: 0;
+	height: 0;
+	background-color: #FFFFFF;
+	transition: 0.5s;
+	width: 250px;
+	overflow: hidden;
+}
+.search_val ul {
+	width: 100%;
+	height: 540px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.search_val ul::-webkit-scrollbar {
+	/*滚动条整体样式*/
+	width: 4px;
+	/*高宽分别对应横竖滚动条的尺寸*/
+}
+
+.search_val ul::-webkit-scrollbar-thumb {
+	/*滚动条里面小方块*/
+	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.search_val ul::-webkit-scrollbar-track {
+	/*滚动条里面轨道*/
+	background: transparent;
+}
+
+.search_val li {
+	padding: 12px 16px 12px 21px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	height: 70px;
+	width: 250px;
+	margin: 0 auto;
+	list-style: none;
+	display: flex;
+	cursor: pointer;
+}
+
+.search_val li:hover {
+	background-color: #e5e5e5;
+}
+
+.search_val img{
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	margin: auto 0;
+}
+.search_val span{
+	font-weight: 500;
+	font-size: 18px;
+	display: inline-block;
+	flex-grow: 1;
+	line-height: 39px;
+	padding-left: 8px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.right {
+	width: 500px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	background-color: #ededed;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	border-right: 1px solid #DDDDDD;
+}
+
+.right_head {
+	flex-grow: 0;
+	flex-shrink: 0;
+	height: 60px;
+	background-color: #FFFFFF;
+	padding: 15px 20px 5px;
+	border-left: 1px solid #FFFFFF;
+}
+
+.right_head label {
+	text-align: left;
+	line-height: 40px;
+	display: inline-block;
+	width: 200px;
+	height: 40px;
+	margin: 0;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+#right_per {
+	float: right;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-image: url(../picture/friend/ones.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#right_per:hover {
+	background-image: url(../picture/friend/ones_2.png);
+	cursor: pointer;
+}
+
+.right_body {
+	flex-grow: 1;
+	padding: 10px 18px 20px 22px;
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+	border-left: 1px solid #e5e5e5;
+}
+
+.right_body::-webkit-scrollbar {
+	/*滚动条整体样式*/
+	width: 4px;
+	/*高宽分别对应横竖滚动条的尺寸*/
+}
+
+.right_body::-webkit-scrollbar-thumb {
+	/*滚动条里面小方块*/
+	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.right_body::-webkit-scrollbar-track {
+	/*滚动条里面轨道*/
+	background: transparent;
+}
+
+.friend_mes {
+	position: relative;
+	margin: 6px 0;
+	display: flex;
+	padding-right: 40px;
+}
+
+.friend_mes img {
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	margin: 0;
+}
+
+.friend_mes>div {
+	position: relative;
+	display: inline-block;
+}
+
+.friend_mes i {
+	display: inline;
+	width: 0;
+	height: 0;
+	border-right: 6px solid #FFFFFF;
+	border-block: 6px solid transparent;
+	position: absolute;
+	top: 15px;
+	left: 4px;
+}
+
+.friend_mes span {
+	background-color: #FFFFFF;
+	display: inline-block;
+	border-radius: 5px;
+	min-height: 40px;
+	margin: 0px 10px;
+	line-height: 30px;
+	font-size: 15px;
+	padding: 5px 10px;
+}
+
+.my_mes {
+	position: relative;
+	margin: 6px 0;
+	display: flex;
+	justify-content: flex-end;
+	padding-left: 40px;
+}
+
+.my_mes img {
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	margin: 0;
+}
+
+.my_mes>div {
+	position: relative;
+	display: inline-block;
+}
+
+.my_mes i {
+	display: inline;
+	width: 0;
+	height: 0;
+	border-left: 6px solid #FFFFFF;
+	border-block: 6px solid transparent;
+	position: absolute;
+	top: 15px;
+	right: 4px;
+}
+
+.my_mes span {
+	background-color: #FFFFFF;
+	display: inline-block;
+	border-radius: 5px;
+	min-height: 40px;
+	margin: 0px 10px;
+	line-height: 30px;
+	font-size: 15px;
+	padding: 5px 10px;
+}
+
+.right_bottom {
+	height: 60px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	padding: 5px 20px 15px;
+	display: flex;
+	border-left: 1px solid #e5e5e5;
+}
+
+#send_mes {
+	outline: none;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+	padding-left: 10px;
+	width: 370px;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, .14);
+}
+
+#send_mes:hover {
+	border-color: #c0c0c0;
+}
+
+#send_mes:focus {
+	border-color: #00afda;
+}
+
+#send_btn {
+	width: 80px;
+	margin-left: 10px;
+	outline: none;
+	border: 1px solid #00b5e5;
+	background-color: #00b5e5;
+	border-radius: 5px;
+	background-image: url(../picture/friend/send.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, .14);
+}
+
+#send_btn:hover {
+	border: 1px solid #00bceb;
+	background-color: #00bceb;
+}
+
+#send_btn:focus {
+	border: 1px solid #00afda;
+	background-color: #00afda;
+}
+.right_friend{
+	width: 500px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	background-color: #ededed;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	border-right: 1px solid #DDDDDD;
+	border-left: 1px solid #e5e5e5;
+	background-image: url(../picture/friend/logo.png);
+	background-position: center;
+	background-size: 106px 100px;
+	background-repeat: no-repeat;
+}
+.ones {
+	width: 0px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	background-color: #FFFFFF;
+	transition: 0.5s;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.ones_head {
+	padding: 10px 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.ones_head img {
+	width: 100px;
+	height: 100px;
+	border-radius: 5px;
+	margin: 60px auto 10px;
+}
+
+.ones_head label {
+	font-size: 18px;
+	margin: 0;
+	font-weight: 600;
+	text-align: center;
+}
+
+.ones_head span {
+	font-size: 13px;
+	display: block;
+	font-weight: 400;
+	text-align: center;
+}
+
+.ones_body {
+	margin: 10px 15px;
+	padding: 15px 5px 0;
+	border-top: 1px solid #DDDDDD;
+	display: grid;
+	grid-template-columns: 55px auto;
+	grid-template-rows: 35px 35px 35px 35px;
+}
+
+.ones_body label {
+	font-size: 14px;
+	display: inline-block;
+	text-align: justify;
+	margin: 0;
+	margin-right: 5px;
+	line-height: 35px;
+	color: #bfbfbf;
+}
+
+.ones_body label:after {
+	content: '';
+	display: inline-block;
+	width: 55px;
+}
+
+.ones_body span {
+	font-size: 16px;
+	line-height: 35px;
+	padding-left: 10px;
+	color: #353535;
+	font-weight: 500;
+}
+
+#remark {
+	outline: none;
+	height: 30px;
+}
+
+#remark:focus {
+	border: 1px solid #DDDDDD;
+}
+#add_toast {
+	position: absolute;
+	border-radius: 5px;
+	overflow: hidden;
+	z-index: 11;
+}
+
+#add_toast_body {
+	width: 400px;
+	height: 100px;
+	overflow: hidden;
+}
+
+#add_toast_body>div {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+#add_input {
+	outline: none;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+	padding-left: 10px;
+	width: 220px;
+	height: 40px;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, .14);
+	margin: auto 0;
+	margin-right: 4px;
+}
+
+#add_input:hover {
+	border-color: #c0c0c0;
+}
+
+#add_input:focus {
+	border-color: #00afda;
+}
+#add_input[disabled]{
+    box-shadow: none;
+    background-color: #f4f5f7;
+    color: #ccd0d7;
+    border-color: #dcdfe6;
+}
+
+#add_input[disabled]:hover {
+	border-color: #dcdfe6;
+}
+
+#add_btn {
+	width: 100px;
+	height: 40px;
+	margin-left: 10px;
+	outline: none;
+	border: 1px solid #00b5e5;
+	background-color: #00b5e5;
+	border-radius: 5px;
+	color: #fff;
+	margin: auto 0;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, .14);
+}
+
+#add_btn:hover {
+	border: 1px solid #00bceb;
+	background-color: #00bceb;
+}
+
+#add_btn:focus {
+	border: 1px solid #00afda;
+	background-color: #00afda;
+}
+#add_btn[disabled]{
+    background-color: #109cc1;
+    border-color: #109cc1;
+    opacity: 1;
+    box-shadow: none;
+}
+.friend_list li > div{
+    width: 90px;
+    height: 30px;
+    display: inline-block;
+    display: flex;
+    position: absolute;
+	z-index: 10;
+	top: 20px;
+	right: 16px;
+}
+.friend_btn{
+    width: 60px;
+	height: 30px;
+	outline: none;
+	border: 1px solid #00b5e5;
+	background-color: #00b5e5;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-right: 1px solid #DDDDDD;
+	color: #fff;
+	font-size: 13px;
+	margin: 0;
+}
+.friend_btn:hover {
+	border: 1px solid #00bceb;
+	background-color: #00bceb;
+}
+.friend_btn_re{
+    width: 30px;
+	height: 30px;
+	outline: none;
+	border: 1px solid #DDDDDD;
+	background-color: #ededed;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+	color: #353535;
+	margin: 0;
+	font-size: 7px;
+	text-decoration: underline;
+}
+.friend_btn_re:hover {
+	border: 1px solid #DDDDDD;
+	background-color: #e0e0e0;
+}
+.friend_list li > div > span{
+    color: #353535;
+    font-size: 10px;
+    line-height: 30px;
+    text-align: right;
+}

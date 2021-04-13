@@ -1,0 +1,279 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body {
+	background-color: #082c30;
+	overflow-x: hidden;
+}
+.gameMsg_gallery_container {
+	margin: auto;
+	width: 1220px;
+	height: 727px;
+	padding: 10px;
+	text-align: center;
+}
+.gameMsg_gallery_picture {
+	width: 1200px;
+	height: 677px;
+	margin-left: 0;
+	display: flex;
+	animation: switch 42s ease-out infinite;
+	transition-duration: 1s;
+}
+.gameMsg_gallery_picture img{
+	float: left;
+	width: 1200px;
+	height: 677px;
+	max-width: 100%;
+	max-height: 100%;
+	margin-right: 80px;
+	flex-shrink: 0;
+}
+@keyframes switch{
+	0%,11%{
+		margin-left: 0;
+	}
+	14%,25%{
+		margin-left: -1280px;
+	}
+	28%,39%{
+		margin-left: -2560px;
+	}
+	42%,53%{
+		margin-left: -3840px;
+	}
+	56%,67%{
+		margin-left: -5120px;
+	}
+	70%,81%{
+		margin-left: -6400px;
+	}
+	84%,96%{
+		margin-left: -7680px;
+	}
+	100%{
+		margin-left: 0;
+	}
+}
+.gameMsg_gallery_control{
+	width: 1200px;
+	height: 30px;
+	margin: auto;
+	display: flex;
+	position: absolute;
+	justify-content: center;
+}
+.gameMsg_gallery_control span{
+	width: 30px;
+	height: 3px;
+	display: inline-block;
+	background-color: white;
+	background-clip: padding-box;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	cursor: pointer;
+	margin-inline: 3px;
+	box-sizing: content-box;
+	opacity: .5;
+	animation: switchLine 5s ease-out infinite;
+	transition-duration: 1s;
+}
+.gameMsg_name {
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	width: 1200px;
+	margin: auto;
+	padding-top: 20px;
+}
+.gameMsg_gallery_mes{
+	width: 1360px;
+	height: 150px;
+	margin: auto;
+}
+.gameMsg_gallery_mes > div{
+	width: 100%;
+	height: 150px;
+	display: flex;
+}
+.gameMsg_gallery_logo{
+	width: 350px;
+	height: 150px;
+	background-color: #0a3d43;
+	border-radius: 5px;
+}
+.gameMsg_gallery_logo img{
+	width: 350px;
+	height: 150px;
+	max-height: 100%;
+}
+.gameMsg_gallery_direction{
+	color: white;
+	font-size: 17px;
+	width: 810px;
+	height: 150px;
+	line-height: 35px;
+	margin-left: 20px;
+	padding-right: 20px;
+	border-bottom: .5px solid #0a3d43;
+	overflow: hidden;
+}
+.gameMsg_gallery_buy{
+	width: 200px;
+	height: 150px;
+	color: white;
+	align-items: auto;
+	border-bottom: .5px solid #0a3d43;
+}
+.gameMsg_gallery_buy div{
+	width: 200px;
+	margin-top: 10px;
+	display: flex;
+}
+.gameMsg_gallery_buy span{
+	width: 45px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	border-radius: 5px;
+	background-color: #0074e4;
+}
+.gameMsg_gallery_buy p{
+	width: max-content;
+	height: 35px;
+	text-align: center;
+	line-height: 40px;
+	margin: 0;
+	padding: 0;
+	text-decoration: line-through;
+	display: inline-block;
+	font-size: 16px;
+	padding-inline: 10px;
+}
+.gameMsg_gallery_buy label{
+	font-size: 20px;
+	height: 35px;
+	line-height: 35px;
+	margin: 0;
+	font-weight: 500;
+}
+#gameMsg_gallery_buy_left{
+	width: 150px;
+	height: 50px;
+	outline: none;
+	background-color: transparent;
+	border: .5px solid #eeeeee;
+	color: white;
+	font-size: 12px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+#gameMsg_gallery_buy_left:hover {
+	background-color: white;
+	color: #000000;
+}
+#gameMsg_gallery_buy_right{
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	outline: none;
+	background-image: url(../picture/buycar.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: .5px solid #eeeeee;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	display: inline-flex;
+}
+#gameMsg_gallery_buy_right:hover{
+	background-color: white;
+	color: #000000;
+	background-image: url(../picture/buycar_2.png);
+}
+#gameMsg_gallery_buy_right[disabled]{
+	background-color: white;
+	background-image: url(../picture/buycar_3.png);
+}
+#gameMsg_gallery_buy_right[disabled]:hover{
+	background-color: white;
+	background-image: url(../picture/buycar_3.png);
+}
+
+.gameMsg_gallery_de{
+	width: 1360px;
+	height: 200px;
+	margin: auto;
+	color: #DDDDDD;
+	margin-top: 50px;
+	display: flex;
+}
+.gameMsg_gallery_title{
+	width: 350px;
+	height: 200px;
+	font-size: 20px;
+	font-weight:600;
+	letter-spacing: 1px;
+}
+.gameMsg_gallery_deMsg{
+	width: 1010px;
+	height: 200px;
+	display: grid;
+	grid-template-columns: 1fr 1fr auto;
+	padding-left: 30px;
+}
+.gameMsg_gallery_deMsg div{
+	font-size: 17px;
+	color: #7f9193;
+	font-weight: 500;
+	line-height: 30px;
+	letter-spacing: 1.5px;
+}
+.gameMsg_gallery_deMsg span{
+	font-size: 17px;
+	color: #DDDDDD;
+	font-weight: 600;
+	display: block;
+}
+.gameMsg_gallery_config{
+	width: 1010px;
+	height: 750px;
+	border-radius: 10px;
+	background-color: #0a3d43;
+	padding: 50px;
+	font-size: 17px;
+	color: #DDDDDD;
+	font-weight: 600;
+	display: block;
+}
+.config_title{
+	font-size: 14px;
+	font-weight: 750;
+	padding-bottom: 10PX;
+	border-bottom: .5px solid #0f5f68;
+	margin-bottom: 10px;
+}
+.gameMsg_gallery_conf{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	font-size: 16px;
+	color: #7f9193;
+	font-weight: 500;
+	line-height: 30px;
+	letter-spacing: 1.5px;
+}
+.gameMsg_gallery_conf div{
+	padding-right: 30px;
+	margin-top: 10px;
+}
+.gameMsg_config{
+	margin-bottom: 30px;
+}
+.gameMsg_gallery_conf span{
+	font-size: 15px;
+	color: #DDDDDD;
+	font-weight: 600;
+	display: block;
+}

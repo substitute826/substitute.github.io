@@ -1,0 +1,153 @@
+
+#com {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.5);
+    position: fixed;
+    z-index: 3;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 90%;
+    padding: 3%;
+    position: relative;
+    z-index: 99;
+    opacity: 1;
+    align-items: center;
+}
+
+.communicate {
+    max-width: 800px;
+    max-height: 650px;
+    flex-shrink: 0;
+    height: 70%;
+    background-color: #e5e5ff;
+    padding: 15px;
+    padding-top: 50px;
+    overflow: auto;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.function {
+    width: inherit;
+    max-width: 800px;
+    height: 0px;
+}
+
+.text {
+    width: inherit;
+    max-width: 800px;
+    min-height: 150px;
+}
+
+.question {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.send {
+    flex-grow: 2;
+}
+
+.messagediv {
+    display: flex;
+    list-style: none;
+    font-size: 16px;
+    max-width: 80%;
+}
+
+.message {
+    display: flex;
+    list-style: none;
+    margin-block: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.message li {
+    float: left;
+    margin-inline: 10px;
+}
+
+.message img {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    position: relative;
+    top: 10px
+}
+
+.message_text {
+    line-height: 30px;
+    font-size: 16px;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 15px;
+}
+
+.system {
+    background: gray;
+    color: white;
+    height: auto;
+    font-size: 10px;
+    align-self: center;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.send{
+    width: 150px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: #0a5788;
+    color: whitesmoke;
+    float: right;
+    margin-right: 10px;
+    transform: translateY(-120%);
+    border-radius: 5px;
+}
+.name{
+    width: 74%;
+    max-width: 800px;
+    height: 50px;
+    margin-top: 3%;
+    background-color: white;
+    color: #18384f;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    box-shadow: 2px 3px 10px gray;
+    z-index: 100;
+    transform: translateY(8px);
+}
+.closes{
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    color: black;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    float: right;
+}
+.closes:hover{
+    color: #ff9800;
+    cursor: pointer;
+}
